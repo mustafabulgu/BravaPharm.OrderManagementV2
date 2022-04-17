@@ -4,6 +4,7 @@ using BravaPharm.OrderManagement.App.Contracts;
 using BravaPharm.OrderManagement.App.Services;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+using MudBlazor.Services;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 builder.RootComponents.Add<App>("#app");
@@ -16,4 +17,5 @@ builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 //builder.Services.AddHttpClient<IClient, Client>(client=>client.BaseAddress = new Uri("https://localhost:7077"));
 builder.Services.AddHttpClient<IClient, Client>(_ => new Client(apiUrl, new HttpClient { BaseAddress = new Uri(apiUrl) }) );
 builder.Services.AddScoped<ICategoryDataService, CategoryDataService>();
+builder.Services.AddMudServices();
 await builder.Build().RunAsync();

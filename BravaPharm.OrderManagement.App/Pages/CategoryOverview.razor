@@ -2,7 +2,7 @@
 <h3>CategoryOverview</h3>
 
 
-<table>
+@*<table>
 <thead>
     <tr>
         <th>Category Name </th>
@@ -17,4 +17,16 @@
         </tr>
     }
 </tbody>
-</table>
+</table>*@
+
+<MudTable Items="@Categories" Hover="true" Breakpoint="Breakpoint.Sm"  LoadingProgressColor="Color.Info">
+    <HeaderContent>
+        <MudTh>Category Name</MudTh>
+        <MudTh>Edit Category</MudTh>
+       
+    </HeaderContent>
+    <RowTemplate>
+        <MudTd DataLabel="Category Name">@context.Name</MudTd>
+         <MudTd DataLabel="Edit Category"><a  href="/EditCategory/@context.CategoryId">Edit Category</a></MudTd>
+    </RowTemplate>
+</MudTable>

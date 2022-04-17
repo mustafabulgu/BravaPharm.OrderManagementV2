@@ -11,9 +11,10 @@
         <InputText id="name" class="form-control col-sm-8" @bind-Value="@CategoryToUpsert.Name" placeholder="Category Name"/>
         <ValidationMessage class="offset-sm-3 col-sm-8" For="(()=>CategoryToUpsert.Name)"></ValidationMessage>
     </div>
-    <button class="btn btn-primary" type="submit" >Create Category</button>
+    <MudButton Variant="Variant.Filled" Color="Color.Primary" ButtonType="ButtonType.Submit">Create Category</MudButton>
 </EditForm>
 @if(CategoryToUpsert.CategoryId != Guid.Empty)
 {
-    <button class="btn btn-danger" type="submit" @onclick="HandleDeleteAsync">Delete Category</button>
+    @*<button class="btn btn-danger" type="submit" @onclick="HandleDeleteAsync">Delete Category</button>*@
+   <MudButton Variant="Variant.Filled" Color="Color.Secondary" @onclick="HandleDeleteAsync">Delete Category</MudButton>
 }
