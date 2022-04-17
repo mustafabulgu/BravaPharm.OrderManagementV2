@@ -1,0 +1,86 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{42068E35-7E22-4AD9-8172-F3E5D3DCAC8B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{6F2CA5F5-87A8-47CA-9643-5A22D7FCF712}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{5191C000-FE45-4EC0-8212-4935C07C1CD3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{F999A932-D75B-422D-94E3-6DB0F8D1838D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{8EA68CA5-E404-4ACF-B0DA-E41FB9FB2315}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BravaPharm.OrderManagement.API", "BravaPharm.OrderManagement.API\BravaPharm.OrderManagement.API.csproj", "{D9FD3642-B58D-4220-872D-FCA1144B2D4A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BravaPharm.OrderManagement.Application", "BravaPharm.OrderManagement.Application\BravaPharm.OrderManagement.Application.csproj", "{9B9C9593-AC84-405F-8149-1600DD609826}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BravaPharm.OrderManagement.Domain", "BravaPharm.OrderManagement.Domain\BravaPharm.OrderManagement.Domain.csproj", "{B43C5EA8-60B8-41D8-BA1B-FFC522836914}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BravaPharm.OrderManagement.Infrastructure", "BravaPharm.OrderManagement.Infrastructure\BravaPharm.OrderManagement.Infrastructure.csproj", "{7202BF9B-7BD2-410C-9812-911A7D83DC94}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BravaPharm.OrderManagement.Persistence", "BravaPharm.OrderManagement.Persistence\BravaPharm.OrderManagement.Persistence.csproj", "{04FF5C4D-7708-4379-B821-5FB3405C1116}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BravaPharm.OrderManagement.Application.UnitTests", "BravaPharm.OrderManagement.Application.UnitTests\BravaPharm.OrderManagement.Application.UnitTests.csproj", "{245B36EC-DFEB-45AF-8293-72055FB6AD59}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{30FFB8CA-7B3B-48ED-84B0-8D3EDFA90127}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BravaPharm.OrderManagement.App", "BravaPharm.OrderManagement.App\BravaPharm.OrderManagement.App.csproj", "{C3758EDB-B672-45C7-96DF-2D7BFC06A0EE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D9FD3642-B58D-4220-872D-FCA1144B2D4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9FD3642-B58D-4220-872D-FCA1144B2D4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9FD3642-B58D-4220-872D-FCA1144B2D4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9FD3642-B58D-4220-872D-FCA1144B2D4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B9C9593-AC84-405F-8149-1600DD609826}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B9C9593-AC84-405F-8149-1600DD609826}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B9C9593-AC84-405F-8149-1600DD609826}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B9C9593-AC84-405F-8149-1600DD609826}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B43C5EA8-60B8-41D8-BA1B-FFC522836914}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B43C5EA8-60B8-41D8-BA1B-FFC522836914}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B43C5EA8-60B8-41D8-BA1B-FFC522836914}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B43C5EA8-60B8-41D8-BA1B-FFC522836914}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7202BF9B-7BD2-410C-9812-911A7D83DC94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7202BF9B-7BD2-410C-9812-911A7D83DC94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7202BF9B-7BD2-410C-9812-911A7D83DC94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7202BF9B-7BD2-410C-9812-911A7D83DC94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04FF5C4D-7708-4379-B821-5FB3405C1116}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04FF5C4D-7708-4379-B821-5FB3405C1116}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04FF5C4D-7708-4379-B821-5FB3405C1116}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04FF5C4D-7708-4379-B821-5FB3405C1116}.Release|Any CPU.Build.0 = Release|Any CPU
+		{245B36EC-DFEB-45AF-8293-72055FB6AD59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{245B36EC-DFEB-45AF-8293-72055FB6AD59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{245B36EC-DFEB-45AF-8293-72055FB6AD59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{245B36EC-DFEB-45AF-8293-72055FB6AD59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3758EDB-B672-45C7-96DF-2D7BFC06A0EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3758EDB-B672-45C7-96DF-2D7BFC06A0EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3758EDB-B672-45C7-96DF-2D7BFC06A0EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3758EDB-B672-45C7-96DF-2D7BFC06A0EE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5191C000-FE45-4EC0-8212-4935C07C1CD3} = {42068E35-7E22-4AD9-8172-F3E5D3DCAC8B}
+		{F999A932-D75B-422D-94E3-6DB0F8D1838D} = {42068E35-7E22-4AD9-8172-F3E5D3DCAC8B}
+		{8EA68CA5-E404-4ACF-B0DA-E41FB9FB2315} = {42068E35-7E22-4AD9-8172-F3E5D3DCAC8B}
+		{D9FD3642-B58D-4220-872D-FCA1144B2D4A} = {5191C000-FE45-4EC0-8212-4935C07C1CD3}
+		{9B9C9593-AC84-405F-8149-1600DD609826} = {F999A932-D75B-422D-94E3-6DB0F8D1838D}
+		{B43C5EA8-60B8-41D8-BA1B-FFC522836914} = {F999A932-D75B-422D-94E3-6DB0F8D1838D}
+		{7202BF9B-7BD2-410C-9812-911A7D83DC94} = {8EA68CA5-E404-4ACF-B0DA-E41FB9FB2315}
+		{04FF5C4D-7708-4379-B821-5FB3405C1116} = {8EA68CA5-E404-4ACF-B0DA-E41FB9FB2315}
+		{245B36EC-DFEB-45AF-8293-72055FB6AD59} = {6F2CA5F5-87A8-47CA-9643-5A22D7FCF712}
+		{30FFB8CA-7B3B-48ED-84B0-8D3EDFA90127} = {42068E35-7E22-4AD9-8172-F3E5D3DCAC8B}
+		{C3758EDB-B672-45C7-96DF-2D7BFC06A0EE} = {30FFB8CA-7B3B-48ED-84B0-8D3EDFA90127}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {829A7289-8081-4BFC-BBF1-CD033E42843E}
+	EndGlobalSection
+EndGlobal
