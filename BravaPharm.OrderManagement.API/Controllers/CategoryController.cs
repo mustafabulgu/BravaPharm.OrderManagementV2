@@ -49,6 +49,7 @@ namespace BravaPharm.OrderManagement.API.Controllers
         public async Task<ActionResult<Guid>> CreateCategory([FromBody]CreateCategoryCommand createCategoryCommand)
         {
             _logger.LogInformation($"Adding category {createCategoryCommand.Name}");
+            System.Diagnostics.Trace.TraceError("If you're seeing this, something bad happened");
             var response = await _mediator.Send(createCategoryCommand);
             return Ok(response);
         }
