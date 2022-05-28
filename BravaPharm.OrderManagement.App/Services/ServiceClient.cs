@@ -70,14 +70,14 @@ namespace BravaPharm.OrderManagement.App.Services
     [System.CodeDom.Compiler.GeneratedCode("NSwag", "13.15.10.0 (NJsonSchema v10.6.10.0 (Newtonsoft.Json v11.0.0.0))")]
     public partial class Client : IClient
     {
-        private string _baseUrl = "";
         private System.Net.Http.HttpClient _httpClient;
         private System.Lazy<Newtonsoft.Json.JsonSerializerSettings> _settings;
 
-        public Client(string baseUrl, System.Net.Http.HttpClient httpClient)
+        public Client( System.Net.Http.HttpClient httpClient)
         {
-            BaseUrl = baseUrl;
+             BaseUrl = httpClient.BaseAddress.OriginalString;
             _httpClient = httpClient;
+            
             _settings = new System.Lazy<Newtonsoft.Json.JsonSerializerSettings>(CreateSerializerSettings);
         }
 
@@ -88,11 +88,8 @@ namespace BravaPharm.OrderManagement.App.Services
             return settings;
         }
 
-        public string BaseUrl
-        {
-            get { return _baseUrl; }
-            set { _baseUrl = value; }
-        }
+        public string BaseUrl { get; set; }
+        
 
         protected Newtonsoft.Json.JsonSerializerSettings JsonSerializerSettings { get { return _settings.Value; } }
 

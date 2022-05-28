@@ -11,8 +11,10 @@
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="6.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.DevServer" Version="6.0.0" PrivateAssets="all" />
     <PackageReference Include="Microsoft.Extensions.Http" Version="6.0.0" />
+    <PackageReference Include="Microsoft.IdentityModel.Logging" Version="6.18.0" />
     <PackageReference Include="MudBlazor" Version="6.0.9" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="Microsoft.Authentication.WebAssembly.Msal" Version="6.0.5" />
   </ItemGroup>
 
   <ItemGroup>

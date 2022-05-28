@@ -1,21 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using BravaPharm.OrderManagement.Application.Features.Categories.Commands.CreateCategory;
+﻿using BravaPharm.OrderManagement.Application.Features.Categories.Commands.CreateCategory;
 using BravaPharm.OrderManagement.Application.Features.Categories.Commands.DeleteCategory;
 using BravaPharm.OrderManagement.Application.Features.Categories.Commands.UpdateCategory;
 using BravaPharm.OrderManagement.Application.Features.Categories.Queries.GetCategoryDetail;
 using BravaPharm.OrderManagement.Application.Features.Categories.Queries.GetCategoryList;
-using BravaPharm.OrderManagement.Domain.Entities;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Identity.Web.Resource;
 
 namespace BravaPharm.OrderManagement.API.Controllers
 {
     [ApiController]
     [Route("[controller]")]
+    [Authorize]
+    [RequiredScope(RequiredScopesConfigurationKey = "AzureAd:Scopes")]
     public class CategoryController : ControllerBase
     {
         private readonly IMediator _mediator;

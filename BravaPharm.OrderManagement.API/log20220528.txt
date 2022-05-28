@@ -291,3 +291,61 @@ DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
 DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
 2022-05-28 16:34:11.559 +01:00 [INF] AuthenticationScheme: Bearer was challenged.
 2022-05-28 16:34:11.560 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7077/Category/all - - - 401 0 - 7.5176ms
+2022-05-28 16:38:49.483 +01:00 [WRN] No store type was specified for the decimal property 'OrderTotal' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2022-05-28 16:38:49.577 +01:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2022-05-28 16:38:49.828 +01:00 [INF] Entity Framework Core 6.0.3 initialized 'BravaPharmDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2022-05-28 16:38:52.345 +01:00 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-05-28 16:38:52.399 +01:00 [INF] Executed DbCommand (32ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-05-28 16:38:52.408 +01:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-05-28 16:38:52.414 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-05-28 16:38:52.449 +01:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-05-28 16:38:52.472 +01:00 [INF] No migrations were applied. The database is already up to date.
+2022-05-28 16:38:52.953 +01:00 [INF] Executed DbCommand (21ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Categories] AS [c]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2022-05-28 16:38:52.993 +01:00 [INF] Executed DbCommand (15ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Products] AS [p]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2022-05-28 16:38:53.082 +01:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-05-28 16:38:54.350 +01:00 [INF] Now listening on: https://localhost:7077
+2022-05-28 16:38:54.351 +01:00 [INF] Now listening on: http://localhost:5077
+2022-05-28 16:38:54.357 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-28 16:38:54.403 +01:00 [INF] Hosting environment: Development
+2022-05-28 16:38:54.419 +01:00 [INF] Content root path: C:\Users\User\source\repos\BravaPharm.OrderManagementV2\BravaPharm.OrderManagement.API\
+2022-05-28 16:38:59.478 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7077/swagger/index.html - -
+2022-05-28 16:39:00.731 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7077/swagger/index.html - - - 200 - text/html;charset=utf-8 1257.9557ms
+2022-05-28 16:39:03.702 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7077/_framework/aspnetcore-browser-refresh.js - -
+2022-05-28 16:39:04.418 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7077/_framework/aspnetcore-browser-refresh.js - - - 200 11964 application/javascript;+charset=utf-8 715.3360ms
+2022-05-28 16:39:05.076 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7077/swagger/v1/swagger.json - -
+2022-05-28 16:39:05.332 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7077/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 256.4374ms
+2022-05-28 16:39:45.885 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7077/Category/all - -
+2022-05-28 16:39:45.913 +01:00 [INF] CORS policy execution successful.
+2022-05-28 16:39:45.924 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7077/Category/all - - - 204 - - 39.6555ms
+2022-05-28 16:39:45.946 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7077/Category/all - -
+2022-05-28 16:39:46.035 +01:00 [INF] CORS policy execution successful.
+2022-05-28 16:39:47.294 +01:00 [INF] Executing endpoint 'BravaPharm.OrderManagement.API.Controllers.CategoryController.GetAllCategories (BravaPharm.OrderManagement.API)'
+2022-05-28 16:39:47.325 +01:00 [INF] Route matched with {action = "GetAllCategories", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[BravaPharm.OrderManagement.Application.Features.Categories.Queries.GetCategoryList.CategorySimpleVm]]] GetAllCategories() on controller BravaPharm.OrderManagement.API.Controllers.CategoryController (BravaPharm.OrderManagement.API).
+2022-05-28 16:39:47.342 +01:00 [INF] Getting all Categories
+2022-05-28 16:39:47.557 +01:00 [INF] Entity Framework Core 6.0.3 initialized 'BravaPharmDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2022-05-28 16:39:47.617 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CategoryId], [c].[CreatedBy], [c].[CreatedDate], [c].[LastModifiedBy], [c].[LastModifiedDate], [c].[Name]
+FROM [Categories] AS [c]
+2022-05-28 16:39:47.784 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BravaPharm.OrderManagement.Application.Features.Categories.Queries.GetCategoryList.CategorySimpleVm, BravaPharm.OrderManagement.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-05-28 16:39:47.809 +01:00 [INF] Executed action BravaPharm.OrderManagement.API.Controllers.CategoryController.GetAllCategories (BravaPharm.OrderManagement.API) in 463.5759ms
+2022-05-28 16:39:47.817 +01:00 [INF] Executed endpoint 'BravaPharm.OrderManagement.API.Controllers.CategoryController.GetAllCategories (BravaPharm.OrderManagement.API)'
+2022-05-28 16:39:47.830 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7077/Category/all - - - 200 - application/json;+charset=utf-8 1883.2992ms

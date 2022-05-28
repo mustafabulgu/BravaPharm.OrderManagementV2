@@ -1,10 +1,17 @@
 using BravaPharm.OrderManagement.API.Middleware;
 using BravaPharm.OrderManagement.Application;
 using BravaPharm.OrderManagement.Persistence;
-using Microsoft.AspNetCore.Cors.Infrastructure;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.Identity.Web;
+using Microsoft.IdentityModel.Logging;
 using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
+IdentityModelEventSource.ShowPII = true;
+// Add services to the container.
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddMicrosoftIdentityWebApi(builder.Configuration.GetSection("AzureAd"));
+
 
 // Add services to the container.
 builder.Services.AddApplicationServiceRegistrations();
@@ -46,6 +53,7 @@ app.UseMiddleware<ExcetionHandlerMiddleware>();
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();
