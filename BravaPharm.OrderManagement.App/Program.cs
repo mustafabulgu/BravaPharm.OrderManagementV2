@@ -10,17 +10,20 @@ using Microsoft.IdentityModel.Logging;
 using MudBlazor.Services;
 using Serilog;
 
-var builder = WebAssemblyHostBuilder.CreateDefault(args);
-
 Log.Logger = new LoggerConfiguration().MinimumLevel.Debug()
     .WriteTo.BrowserConsole()
     .CreateLogger();
+
+
+
 try
 {
-    IdentityModelEventSource.ShowPII = true;
+    Log.Information("Check logging1");
+    var builder = WebAssemblyHostBuilder.CreateDefault(args);
+    //IdentityModelEventSource.ShowPII = true;
     builder.RootComponents.Add<App>("#app");
     builder.RootComponents.Add<HeadOutlet>("head::after");
-    Log.Information("Check logging");
+    Log.Information("Check logging2");
 
     var apiUrl = builder.Configuration["ApiUrl"];
     builder.Services.AddTransient<ApiAuthorizationMessageHandler>();
@@ -31,7 +34,7 @@ try
         .AddHttpMessageHandler<ApiAuthorizationMessageHandler>();
 
 
-
+    
 
     builder.Services.AddScoped<ICategoryDataService, CategoryDataService>();
     builder.Services.AddMudServices();

@@ -48,7 +48,14 @@
     </MudDrawer>
     <MudMainContent Class="mudblazor-main-content">
         <MudContainer MaxWidth="MaxWidth.Large">
-            @Body
+          <ErrorBoundary>
+                <ChildContent>
+                    @Body
+                </ChildContent>
+                <ErrorContent>
+                    <p class="errorUI">Nothing to see here right now. Sorry!</p>
+                </ErrorContent>
+            </ErrorBoundary>
         </MudContainer>
 
         <MudScrollToTop TopOffset="400">
