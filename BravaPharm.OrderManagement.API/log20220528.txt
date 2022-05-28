@@ -349,3 +349,127 @@ FROM [Categories] AS [c]
 2022-05-28 16:39:47.809 +01:00 [INF] Executed action BravaPharm.OrderManagement.API.Controllers.CategoryController.GetAllCategories (BravaPharm.OrderManagement.API) in 463.5759ms
 2022-05-28 16:39:47.817 +01:00 [INF] Executed endpoint 'BravaPharm.OrderManagement.API.Controllers.CategoryController.GetAllCategories (BravaPharm.OrderManagement.API)'
 2022-05-28 16:39:47.830 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7077/Category/all - - - 200 - application/json;+charset=utf-8 1883.2992ms
+2022-05-28 20:18:58.631 +01:00 [WRN] No store type was specified for the decimal property 'OrderTotal' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2022-05-28 20:18:58.791 +01:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2022-05-28 20:18:59.163 +01:00 [INF] Entity Framework Core 6.0.3 initialized 'BravaPharmDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2022-05-28 20:19:05.030 +01:00 [INF] Executed DbCommand (144ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-05-28 20:19:05.163 +01:00 [INF] Executed DbCommand (91ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-05-28 20:19:05.198 +01:00 [INF] Executed DbCommand (25ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-05-28 20:19:05.226 +01:00 [INF] Executed DbCommand (24ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-05-28 20:19:05.304 +01:00 [INF] Executed DbCommand (50ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-05-28 20:19:05.334 +01:00 [INF] No migrations were applied. The database is already up to date.
+2022-05-28 20:19:06.140 +01:00 [INF] Executed DbCommand (294ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Categories] AS [c]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2022-05-28 20:19:06.299 +01:00 [INF] Executed DbCommand (126ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Products] AS [p]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2022-05-28 20:19:06.771 +01:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-05-28 20:19:08.700 +01:00 [INF] Now listening on: https://localhost:7077
+2022-05-28 20:19:08.707 +01:00 [INF] Now listening on: http://localhost:5077
+2022-05-28 20:19:08.715 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-28 20:19:08.717 +01:00 [INF] Hosting environment: Development
+2022-05-28 20:19:08.721 +01:00 [INF] Content root path: C:\Users\User\source\repos\BravaPharm.OrderManagementV2\BravaPharm.OrderManagement.API\
+2022-05-28 20:19:13.382 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7077/swagger - -
+2022-05-28 20:19:13.614 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7077/swagger - - - 301 0 - 235.3408ms
+2022-05-28 20:19:13.782 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7077/swagger/index.html - -
+2022-05-28 20:19:14.424 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7077/swagger/index.html - - - 200 - text/html;charset=utf-8 642.0605ms
+2022-05-28 20:19:14.432 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7077/swagger/swagger-ui.css - -
+2022-05-28 20:19:14.432 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7077/swagger/swagger-ui-bundle.js - -
+2022-05-28 20:19:14.432 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7077/swagger/swagger-ui-standalone-preset.js - -
+2022-05-28 20:19:14.432 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7077/_framework/aspnetcore-browser-refresh.js - -
+2022-05-28 20:19:14.513 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7077/_framework/aspnetcore-browser-refresh.js - - - 200 11964 application/javascript;+charset=utf-8 80.8443ms
+2022-05-28 20:19:14.518 +01:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2022-05-28 20:19:14.527 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7077/swagger/swagger-ui.css - - - 200 143632 text/css 94.5952ms
+2022-05-28 20:19:14.814 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7077/_framework/aspnetcore-browser-refresh.js - -
+2022-05-28 20:19:14.850 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7077/_framework/aspnetcore-browser-refresh.js - - - 200 11964 application/javascript;+charset=utf-8 36.6818ms
+2022-05-28 20:19:14.927 +01:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2022-05-28 20:19:15.054 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7077/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 621.8580ms
+2022-05-28 20:19:15.149 +01:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2022-05-28 20:19:15.152 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7077/swagger/swagger-ui-bundle.js - - - 200 1092889 application/javascript 719.7958ms
+2022-05-28 20:19:16.412 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7077/swagger/v1/swagger.json - -
+2022-05-28 20:19:16.705 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7077/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 293.6581ms
+2022-05-28 20:21:22.580 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7077/Category/all - -
+2022-05-28 20:21:24.619 +01:00 [INF] CORS policy execution successful.
+2022-05-28 20:21:27.364 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7077/Category/all - - - 204 - - 4784.4064ms
+2022-05-28 20:21:27.374 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7077/Category/all - -
+2022-05-28 20:21:28.977 +01:00 [INF] CORS policy execution successful.
+2022-05-28 20:22:09.344 +01:00 [WRN] No store type was specified for the decimal property 'OrderTotal' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2022-05-28 20:22:11.483 +01:00 [WRN] No store type was specified for the decimal property 'Price' on entity type 'Product'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2022-05-28 20:22:11.791 +01:00 [INF] Entity Framework Core 6.0.3 initialized 'BravaPharmDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2022-05-28 20:22:13.330 +01:00 [INF] Executed DbCommand (44ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-05-28 20:22:13.393 +01:00 [INF] Executed DbCommand (39ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-05-28 20:22:13.402 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2022-05-28 20:22:13.408 +01:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2022-05-28 20:22:13.483 +01:00 [INF] Executed DbCommand (47ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2022-05-28 20:22:13.511 +01:00 [INF] No migrations were applied. The database is already up to date.
+2022-05-28 20:22:14.315 +01:00 [INF] Executed DbCommand (57ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Categories] AS [c]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2022-05-28 20:22:14.941 +01:00 [INF] Executed DbCommand (563ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Products] AS [p]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2022-05-28 20:22:15.772 +01:00 [INF] User profile is available. Using 'C:\Users\User\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-05-28 20:22:18.114 +01:00 [INF] Now listening on: https://localhost:7077
+2022-05-28 20:22:18.115 +01:00 [INF] Now listening on: http://localhost:5077
+2022-05-28 20:22:18.122 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2022-05-28 20:22:18.123 +01:00 [INF] Hosting environment: Development
+2022-05-28 20:22:18.124 +01:00 [INF] Content root path: C:\Users\User\source\repos\BravaPharm.OrderManagementV2\BravaPharm.OrderManagement.API\
+2022-05-28 20:22:19.894 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7077/swagger/index.html - -
+2022-05-28 20:22:20.629 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7077/swagger/index.html - - - 200 - text/html;charset=utf-8 739.7639ms
+2022-05-28 20:22:20.654 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7077/swagger/swagger-ui-standalone-preset.js - -
+2022-05-28 20:22:20.654 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7077/_framework/aspnetcore-browser-refresh.js - -
+2022-05-28 20:22:20.654 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7077/swagger/swagger-ui-bundle.js - -
+2022-05-28 20:22:20.682 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7077/_framework/aspnetcore-browser-refresh.js - - - 200 11964 application/javascript;+charset=utf-8 28.0872ms
+2022-05-28 20:22:21.024 +01:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2022-05-28 20:22:21.254 +01:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2022-05-28 20:22:21.267 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7077/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 613.4080ms
+2022-05-28 20:22:21.336 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7077/swagger/swagger-ui-bundle.js - - - 200 1092889 application/javascript 682.6614ms
+2022-05-28 20:22:22.015 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7077/swagger/v1/swagger.json - -
+2022-05-28 20:22:22.226 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7077/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 210.6321ms
+2022-05-28 20:23:07.306 +01:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:7077/Category/all - -
+2022-05-28 20:23:07.315 +01:00 [INF] CORS policy execution successful.
+2022-05-28 20:23:07.387 +01:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:7077/Category/all - - - 204 - - 81.7372ms
+2022-05-28 20:23:07.392 +01:00 [INF] Request starting HTTP/2 GET https://localhost:7077/Category/all - -
+2022-05-28 20:23:07.395 +01:00 [INF] CORS policy execution successful.
+2022-05-28 20:23:08.638 +01:00 [INF] Executing endpoint 'BravaPharm.OrderManagement.API.Controllers.CategoryController.GetAllCategories (BravaPharm.OrderManagement.API)'
+2022-05-28 20:23:08.673 +01:00 [INF] Route matched with {action = "GetAllCategories", controller = "Category"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.List`1[BravaPharm.OrderManagement.Application.Features.Categories.Queries.GetCategoryList.CategorySimpleVm]]] GetAllCategories() on controller BravaPharm.OrderManagement.API.Controllers.CategoryController (BravaPharm.OrderManagement.API).
+2022-05-28 20:23:08.686 +01:00 [INF] Getting all Categories
+2022-05-28 20:23:08.929 +01:00 [INF] Entity Framework Core 6.0.3 initialized 'BravaPharmDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer:6.0.3' with options: None
+2022-05-28 20:23:09.039 +01:00 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [c].[CategoryId], [c].[CreatedBy], [c].[CreatedDate], [c].[LastModifiedBy], [c].[LastModifiedDate], [c].[Name]
+FROM [Categories] AS [c]
+2022-05-28 20:23:09.152 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BravaPharm.OrderManagement.Application.Features.Categories.Queries.GetCategoryList.CategorySimpleVm, BravaPharm.OrderManagement.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2022-05-28 20:23:09.170 +01:00 [INF] Executed action BravaPharm.OrderManagement.API.Controllers.CategoryController.GetAllCategories (BravaPharm.OrderManagement.API) in 484.6212ms
+2022-05-28 20:23:09.176 +01:00 [INF] Executed endpoint 'BravaPharm.OrderManagement.API.Controllers.CategoryController.GetAllCategories (BravaPharm.OrderManagement.API)'
+2022-05-28 20:23:09.182 +01:00 [INF] Request finished HTTP/2 GET https://localhost:7077/Category/all - - - 200 - application/json;+charset=utf-8 1790.4029ms
